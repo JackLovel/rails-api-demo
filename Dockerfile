@@ -1,6 +1,6 @@
 FROM ruby:3.1.0
 
-RUN apt-get update -qq
+RUN apt-get update -qq 
 
 ENV LANG=C.UTF-8 \
   BUNDLE_JOBS=4 \

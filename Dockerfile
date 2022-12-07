@@ -23,7 +23,8 @@ COPY . .
 ARG secret_key_base=123
 ARG RAILS_MASTER_KEY=112
 
-CMD /usr/src/app/entrypoint.sh
+RUN chmod +x  entrypoint.sh
+RUN ./entrypoint.sh
 EXPOSE 3000
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

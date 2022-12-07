@@ -1,25 +1,12 @@
-# README
+## 如何運行這個程式
+首先伺服器安裝相慶的Docker套件，然后運行下面幾行命令
+```
+// 構建鏡像
+$ docker compose build 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+// 初始數據寫在 db/seed.rb里
+// entrypoint.sh 程式運行一些關于數據庫命令
+$ docker compose up -d 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# rails-api-demo
+$ docker compose down 
+```

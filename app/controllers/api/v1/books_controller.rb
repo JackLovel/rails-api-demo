@@ -1,3 +1,6 @@
+module Api
+module V1
+  
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show update destroy ]
 
@@ -48,4 +51,6 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:name, :price)
     end
+end
+end
 end

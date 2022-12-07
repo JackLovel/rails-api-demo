@@ -3,8 +3,11 @@
 #
 # Examples:
 #
+
+a = Author.create!(first_name: 'wang', last_name: 'gog')
+b = Author.create!(first_name: 'wang', last_name: 'jimmy')
 movies = Book.create([
-    { name: "Star Wars" , price: "111"},
-    { name: "Star Wars11" , price: "211"}
+    { name: "Star Wars" , price: "111", author: a},
+    { name: "Star Wars11" , price: "211",author: b}
  ])
 # Character.create(name: "Luke", movie: movies.first)
